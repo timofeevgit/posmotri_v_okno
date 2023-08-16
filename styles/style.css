@@ -41,8 +41,9 @@ ol {
 .page {
   display: flex;
   justify-content: center;
-  margin-top: 133px;
-  margin-bottom: 133px;
+  align-items: center;
+  /* margin-top: 133px;
+  margin-bottom: 133px; */
 }
 
 .content {
@@ -300,7 +301,4 @@ ol {
 
 .content__video-card-description-container {
   padding-top: 6px;
-}
-.hello {
-  
 }
