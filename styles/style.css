@@ -36,3 +36,268 @@ ul,
 ol {
   list-style: none;
 }
+
+/* Styles */
+.page {
+  display: flex;
+  justify-content: center;
+  margin-top: 133px;
+  margin-bottom: 133px;
+}
+
+.content {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  gap: 30px;
+  width: 1140px;
+  height: 534px;
+}
+
+.search-form {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+
+.result__video {
+  width: 100%;
+}
+
+.result__video-container {
+  position: relative;
+  width: 711px;
+  margin-bottom: 16px;
+}
+
+.content__details {
+  display: flex;
+  flex-direction: column;
+  height: 544px;
+}
+
+.content__list {
+  position: relative;
+  width: 399px;
+  margin-top: 26px;
+  overflow-y: scroll;
+  overflow-x: hidden;
+}
+
+.content__list-item {
+  display: flex;
+}
+
+.content__list-item:not(:nth-last-child(1)) {
+  margin-bottom: 30px;
+}
+
+.content__video-card {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.content__card-link {
+  width: 100%;
+  text-decoration: none;
+  margin: 3px;
+}
+
+.content__video-card-thumbnail {
+  width: 194px;
+  height: 103px;
+  object-fit: fill;
+  object-position: right;
+}
+
+.content__video-card-description-container {
+  width: 100%;
+}
+
+.visually-hidden {
+  position: absolute;
+  inline-size: 1px;
+  block-size: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  white-space: nowrap;
+}
+
+.search-form__fieldset-title {
+  color: #FFF;
+  font-family: Fira Sans Condensed;
+  font-size: 18px;
+}
+
+.title {
+  color: #FFF;
+  font-family: Oswald;
+  font-size: 75px;
+  font-weight: 700;
+  line-height: 94%;
+  text-transform: uppercase;
+}
+
+.content__accent {
+  color: #545050;
+  font-family: Oswald;
+  font-size: 75px;
+  font-weight: 700;
+  line-height: 94%; /* 70.5px */
+  text-transform: uppercase;
+}
+
+.content__video-card-title {
+  color: #FFF;
+  font-family: Oswald;
+  font-size: 30px;
+  font-weight: 700;
+  line-height: 100%; /* 30px */
+  text-transform: uppercase;
+}
+
+.content__video-card-description {
+  color: #FFF;
+  font-family: Fira Sans Condensed;
+  font-size: 18px;
+  line-height: 16.2px; /* 90% */
+}
+
+.search-form__fieldset {
+  border: none;
+}
+
+.search-form__fieldset-title {
+  margin-block-end: 5px;
+  font-weight: 400;
+  font-size: 18px;
+}
+
+.search-form__label {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  width: fit-content;
+  cursor: pointer;
+}
+
+.search-form__label:hover .search-form__label-text {
+  text-decoration: underline;
+}
+
+.search-form__checkbox-list {
+  display: flex;
+  gap: 15px;
+}
+
+.search-form__pseudo-checkbox {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  inline-size: 19px;
+  block-size: 19px;
+  border: 1px solid #fff;
+}
+
+.search-form__checkbox:checked + .search-form__pseudo-checkbox::after {
+  content: '';
+  min-inline-size: 15px;
+  min-block-size: 15px;
+  background-color: #fff;
+}
+
+.search-form__label:has(:focus-visible) {
+  outline: 1px solid #fff;
+  outline-offset: 2px;
+}
+
+.search-form__label-text {
+  appearance: none;
+}
+
+.search-form__textfield {
+  min-inline-size: 225px;
+  min-block-size: 27px;
+  border: none;
+  border-block-start: 1px solid #fff;
+  border-block-end: 1px solid #fff;
+  color: #fff;
+  font-family: inherit;
+  font-size: inherit;
+  background-color: transparent;
+  appearance: none;
+  outline: none;
+}
+
+.search-form__label:has(.search-form__textfield:active) {
+  outline: none;
+  border-left: 1px solid #FFF;
+  border-right: 1px solid #FFF;
+}
+
+
+/* Стили кнопок */
+.button {
+  display: flex;
+  width: 194px;
+  height: 34px;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  flex-shrink: 0;
+  background-color: inherit;
+  border: 1px solid #FFF;
+  color: #fff;
+  font-size: 18px;
+  font-weight: 700;
+  cursor: pointer
+}
+
+.button:hover {
+  text-decoration: underline;
+}
+
+.button:active {
+  background-color: #545050;
+}
+
+.button:focus-visible {
+  outline: 1px solid #fff;
+  outline-offset: 2px;
+}
+
+.more-button {
+  display: flex;
+  width: 399px;
+  height: 34px;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  flex-shrink: 0;
+  border: 1px solid #FFF;
+}
+
+/* Состояния card */
+.content__card-link {
+  display: block;
+}
+
+.content__card-link:active {
+  background-color: #545050;
+}
+
+.content__card-link_current {
+  background-color: #545050;
+}
+
+.content__video-card:hover {
+  text-decoration: underline;
+  text-decoration-color: #fff;
+}
+
+.content__video-card-description-container {
+  padding-top: 6px;
+}
